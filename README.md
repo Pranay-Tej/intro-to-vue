@@ -44,3 +44,15 @@ VS Code extensions
   - [X] Add dynamic class to count text
     - [X] Red when number < 0
     - [X] Blue when number >= 0
+
+- **1.2** Forms
+  - [X] Text input
+  - [ ] Number
+  - [ ] Date
+  - [ ] Time
+  - [ ] Select
+  - [ ] Multi Select
+  - [ ] Radio group
+  - [ ] Checkbox group
+  - [ ] Input bind for step size
+  - [ ] Dynamic form array
