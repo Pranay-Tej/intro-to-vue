@@ -30,3 +30,17 @@ VS Code extensions
   - axios
   - vue-router
   - vuex
+
+---
+
+## Tasks
+
+### 1. Counter
+
+- **1.1** Counter functionality
+  - [X] Increase count
+  - [ ] Decrease count
+  - [ ] Reset count
+  - [ ] Add dynamic class to count text
+    - [ ] Red when number < 0
+    - [ ] Blue when number >= 0
