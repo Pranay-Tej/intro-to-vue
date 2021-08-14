@@ -1,13 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <p class="count">
+    {{ count }}
+  </p>
+
+  <button @click="increase">⬆️ {{ step }}</button>
+
+  <!-- TODO: add a button to decrease count -->
+
+  <!-- TODO: add a button to reset count -->
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      count: 0,
+      step: 1,
+    };
+  },
+  methods: {
+    increase() {
+      console.log({
+        count: this.count,
+        msg: `increasing count by ${this.step} units`,
+      });
+      this.count += this.step;
+    },
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+    // TODO:  add a method to decrease count
+
+    // TODO:  add a method to reset count
+  },
+};
 </script>
 
 <style>
@@ -18,5 +43,10 @@ import HelloWorld from './components/HelloWorld.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: bold;
 }
 </style>
