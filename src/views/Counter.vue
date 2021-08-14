@@ -9,7 +9,8 @@
   <button @click="decrease">⬇️ {{ step }}</button>
   <button @click="reset">🚫</button>
 
-  <!-- TODO: use number input to bind 'step' -->
+  <button @click="$emit('emitCurrentValue', { count, step })">EmitValue</button>
+
   <br />
   <label for="step">Step</label>
   <input type="number" name="step" id="step" v-model="step" />
@@ -18,10 +19,12 @@
 <script>
 export default {
   name: "Counter",
+  props: ["step"],
+  emits: ["emitCurrentValue"],
   data() {
     return {
       count: 0,
-      step: 1,
+      // step: 1,
     };
   },
   methods: {

@@ -1,5 +1,6 @@
 <template>
-  <Counter />
+  <Counter :step="1" @emitCurrentValue="printCounterValue(1, $event)" />
+  <Counter :step="10" @emitCurrentValue="printCounterValue(2, $event)" />
   <hr />
   <Forms />
 </template>
@@ -13,6 +14,11 @@ export default {
   components: {
     Forms,
     Counter,
+  },
+  methods: {
+    printCounterValue(counterId, data) {
+      console.log({ counterId, ...data });
+    },
   },
 };
 </script>

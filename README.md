@@ -57,3 +57,9 @@ VS Code extensions
   - [X] Input bind for step size
   - [X] Dynamic form array
   - [ ] Check [vue-forms](https://github.com/Pranay-Tej/vue-forms) repo for more complex forms
+
+- **1.3** Component Basics
+  - [X] Extract forms to a component
+  - [X] Extract counter to a component
+  - [X] Set step size as prop
+  - [X] Send current value, step as event to parent component
