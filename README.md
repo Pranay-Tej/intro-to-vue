@@ -63,3 +63,15 @@ VS Code extensions
   - [X] Extract counter to a component
   - [X] Set step size as prop
   - [X] Send current value, step as event to parent component
+
+### 2. CRUD App
+
+- [X] JSON Server `npm i -D json-server`
+- [X] Axios `npm i axios`
+- [X] Install packages `npm i`
+- [X] Run API `npm run api`
+- [X] fetchAll
+- [ ] fetchById
+- [ ] create
+- [ ] updateById
+- [ ] deleteById

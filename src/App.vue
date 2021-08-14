@@ -1,19 +1,23 @@
 <template>
-  <Counter :step="1" @emitCurrentValue="printCounterValue(1, $event)" />
-  <Counter :step="10" @emitCurrentValue="printCounterValue(2, $event)" />
-  <hr />
-  <Forms />
+  <!-- <Counter :step="1" @emitCurrentValue="printCounterValue(1, $event)" />
+  <Counter :step="10" @emitCurrentValue="printCounterValue(2, $event)" /> -->
+  <!-- <hr /> -->
+  <!-- <Forms /> -->
+
+  <TodoList />
 </template>
 
 <script>
 import Forms from "./views/Forms.vue";
 import Counter from "./views/Counter.vue";
+import TodoList from "./views/TodoList.vue";
 
 export default {
   name: "App",
   components: {
     Forms,
     Counter,
+    TodoList,
   },
   methods: {
     printCounterValue(counterId, data) {
