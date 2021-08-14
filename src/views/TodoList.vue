@@ -1,10 +1,14 @@
 <template>
   <ul>
-    <li v-for="todo in todoList" :key="todo.id">
-      {{ todo.title }}
+    <li
+      v-for="todoItem in todoList"
+      :key="todoItem.id"
+      :class="todoItem.id === todo?.id ? 'selected' : ''"
+    >
+      {{ todoItem.title }}
       <!-- TODO: edit/delete todo -->
-      <button>✒️</button>
-      <button>❌</button>
+      <button @click="fetchById(todoItem.id)">✒️</button>
+      <button @click="deleteById(todoItem.id)">❌</button>
     </li>
   </ul>
 
@@ -53,10 +57,22 @@ export default {
     // fetchById
     fetchById(id) {
       console.log("edit", id);
+      axios
+        .get(`http://localhost:3001/todos/${id}`)
+        .then((res) => (this.todo = res.data))
+        .catch((error) => console.error(error));
     },
     // delete
-    deleteTodo(id) {
+    deleteById(id) {
       console.log("deleting", id);
+      axios
+        .delete(`http://localhost:3001/todos/${id}`)
+        .then((response) => {
+          console.log(response.data);
+          // this.todo = response.data;
+          this.fetchAll();
+        })
+        .catch((e) => console.error(e));
     },
     // saveForm
     saveTodo() {
@@ -69,10 +85,32 @@ export default {
     // create
     createTodo() {
       console.log("saving");
+      axios
+        .post(`http://localhost:3001/todos`, {
+          title: this.todo.title,
+        })
+        .then((response) => {
+          console.log(response.data);
+          // this.todo = response.data;
+          this.resetTodoForm();
+          this.fetchAll();
+        })
+        .catch((e) => console.error(e));
     },
     // update
     updateTodo() {
       console.log("updating", this.todo.id);
+      axios
+        .put(`http://localhost:3001/todos/${this.todo.id}`, {
+          title: this.todo.title,
+        })
+        .then((response) => {
+          console.log(response.data);
+          // this.todo = response.data;
+          this.resetTodoForm();
+          this.fetchAll();
+        })
+        .catch((e) => console.error(e));
     },
   },
   created() {
@@ -85,5 +123,9 @@ export default {
 input,
 select {
   margin-bottom: 0.5em;
+}
+
+.selected {
+  background-color: hsl(0, 0%, 80%);
 }
 </style>

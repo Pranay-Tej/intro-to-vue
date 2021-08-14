@@ -71,7 +71,8 @@ VS Code extensions
 - [X] Install packages `npm i`
 - [X] Run API `npm run api`
 - [X] fetchAll
-- [ ] fetchById
-- [ ] create
-- [ ] updateById
-- [ ] deleteById
+- [X] fetchById
+- [X] create
+- [X] updateById
+- [X] deleteById
+- [X] Bonus: highlight the selected item when editing
