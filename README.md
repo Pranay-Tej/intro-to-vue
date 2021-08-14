@@ -75,3 +75,4 @@ VS Code extensions
 - [ ] create
 - [ ] updateById
 - [ ] deleteById
+- [ ] Bonus: highlight the selected item when editing
