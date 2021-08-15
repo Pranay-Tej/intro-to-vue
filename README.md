@@ -19,7 +19,7 @@ VS Code extensions
 - Essential
   - Vetur (Pine Wu)
   - Vue VSCode Snippets (sarah.drasner)
-    - `v-base`
+    - `vbase`
   - Prettier
 - Additional
   - Indent rainbow
@@ -85,6 +85,7 @@ VS Code extensions
 - [X] router-view
 - [X] Set Counter Route
 - [X] Set default `step` prop to Counter Component
-- [ ] Set Forms Route
-- [ ] Set Todo route
+- [X] Set Forms Route
+- [X] Set Todo route
 - [X] Create Dynamic routes
+- [X] Bonus: Add `404 NOT FOUND` route
