@@ -19,7 +19,12 @@
 <script>
 export default {
   name: "Counter",
-  props: ["step"],
+  props: {
+    step: {
+      type: Number,
+      default: 1,
+    },
+  },
   emits: ["emitCurrentValue"],
   data() {
     return {

@@ -4,7 +4,13 @@
   <!-- <hr /> -->
   <!-- <Forms /> -->
 
-  <TodoList />
+  <!-- <TodoList /> -->
+  <router-link to="/">Home</router-link>
+  <router-link to="/counter">Counter</router-link>
+
+  <hr />
+  <!-- Replaced Dynamically -->
+  <router-view></router-view>
 </template>
 
 <script>

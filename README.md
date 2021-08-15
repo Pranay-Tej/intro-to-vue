@@ -76,3 +76,15 @@ VS Code extensions
 - [X] updateById
 - [X] deleteById
 - [X] Bonus: highlight the selected item when editing
+
+### 3. Routing
+
+- [X] vue-router `npm i vue-router`
+- [X] Configure `router/index.js`
+- [X] Use router plugin
+- [X] router-view
+- [X] Set Counter Route
+- [X] Set default `step` prop to Counter Component
+- [ ] Set Forms Route
+- [ ] Set Todo route
+- [X] Create Dynamic routes
