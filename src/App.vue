@@ -16,14 +16,14 @@
 <script>
 import Forms from "./views/Forms.vue";
 import Counter from "./views/Counter.vue";
-import TodoList from "./views/TodoList.vue";
+// import TodoList from "./views/TodoList.vue";
 
 export default {
   name: "App",
   components: {
-    Forms,
-    Counter,
-    TodoList,
+    // Forms,
+    // Counter,
+    // TodoList,
   },
   methods: {
     printCounterValue(counterId, data) {
