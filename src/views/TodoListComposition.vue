@@ -14,38 +14,67 @@
 
 <script>
 import axios from "axios";
+import { ref } from "@vue/reactivity";
 
 export default {
   name: "TodoListComposition",
   setup() {
-    // TODO: Convert options API ▶ composition API
-  },
-  data() {
-    return {
-      isLoading: false,
-      errorMessage: null,
-      todoList: [],
-    };
-  },
-  methods: {
-    fetchAll() {
-      this.isLoading = true;
+    // data
+    const isLoading = ref(false);
+    const errorMessage = ref(null);
+    const todoList = ref([]);
+
+    // methods
+    function fetchAll() {
+      isLoading.value = true;
       axios
         .get(`http://localhost:3001/todos`)
         .then((res) => {
-          this.isLoading = false;
-          this.todoList = res.data;
+          isLoading.value = false;
+          todoList.value = res.data;
         })
         .catch((error) => {
-          this.isLoading = false;
-          this.errorMessage = error;
+          isLoading.value = false;
+          errorMessage.value = error;
           console.error(error);
         });
-    },
+    }
+
+    // created
+    fetchAll();
+
+    return {
+      isLoading,
+      errorMessage,
+      todoList,
+    };
   },
-  created() {
-    this.fetchAll();
-  },
+  // data() {
+  //   return {
+  //     isLoading: false,
+  //     errorMessage: null,
+  //     todoList: [],
+  //   };
+  // },
+  // methods: {
+  //   fetchAll() {
+  //     this.isLoading = true;
+  //     axios
+  //       .get(`http://localhost:3001/todos`)
+  //       .then((res) => {
+  //         this.isLoading = false;
+  //         this.todoList = res.data;
+  //       })
+  //       .catch((error) => {
+  //         this.isLoading = false;
+  //         this.errorMessage = error;
+  //         console.error(error);
+  //       });
+  //   },
+  // },
+  // created() {
+  //   this.fetchAll();
+  // },
 };
 </script>
 
