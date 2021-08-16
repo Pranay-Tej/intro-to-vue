@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Counter from "../views/Counter.vue";
-import Forms from "../views/Forms.vue";
-import TodoList from "../views/TodoList.vue";
-import NotFound from "../views/NotFound.vue";
-import Expenses from "../views/expenses/Expenses.vue";
-import ExpenseList from "../views/expenses/ExpenseList.vue";
-import ExpenseDetail from "../views/expenses/ExpenseDetail.vue";
+const Counter = () => import("../views/Counter.vue");
+const Forms = () => import("../views/Forms.vue");
+const TodoList = () => import("../views/TodoList.vue");
+const NotFound = () => import("../views/NotFound.vue");
+const Expenses = () => import("../views/expenses/Expenses.vue");
+const ExpenseList = () => import("../views/expenses/ExpenseList.vue");
+const ExpenseDetail = () => import("../views/expenses/ExpenseDetail.vue");
 
 const routes = [
   {

@@ -88,4 +88,5 @@ VS Code extensions
 - [X] Set Forms Route
 - [X] Set Todo route
 - [X] Create Dynamic routes
+- [X] Lazy load routes
 - [X] Bonus: Add `404 NOT FOUND` route
