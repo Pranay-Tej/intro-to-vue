@@ -15,30 +15,38 @@
 <script>
 import axios from "axios";
 import { ref } from "@vue/reactivity";
+import useAxios from "../composables/useAxios";
 
 export default {
   name: "TodoListComposition",
   setup() {
     // data
-    const isLoading = ref(false);
-    const errorMessage = ref(null);
-    const todoList = ref([]);
+    // const isLoading = ref(false);
+    // const errorMessage = ref(null);
+    // const todoList = ref([]);
 
     // methods
-    function fetchAll() {
-      isLoading.value = true;
-      axios
-        .get(`http://localhost:3001/todos`)
-        .then((res) => {
-          isLoading.value = false;
-          todoList.value = res.data;
-        })
-        .catch((error) => {
-          isLoading.value = false;
-          errorMessage.value = error;
-          console.error(error);
-        });
-    }
+    // function fetchAll() {
+    //   isLoading.value = true;
+    //   axios
+    //     .get(`http://localhost:3001/todos`)
+    //     .then((res) => {
+    //       isLoading.value = false;
+    //       todoList.value = res.data;
+    //     })
+    //     .catch((error) => {
+    //       isLoading.value = false;
+    //       errorMessage.value = error;
+    //       console.error(error);
+    //     });
+    // }
+
+    const {
+      data: todoList,
+      isLoading,
+      errorMessage,
+      execute: fetchAll,
+    } = useAxios("http://localhost:3001/todos");
 
     // created
     fetchAll();

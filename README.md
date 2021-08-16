@@ -90,3 +90,13 @@ VS Code extensions
 - [X] Create Dynamic routes
 - [X] Lazy load routes
 - [X] Bonus: Add `404 NOT FOUND` route
+
+### 4. Composition API
+
+- [X] ref
+- [ ] reactive (Read Documentation)
+- [X] computed
+- [X] Convert CounterComposition to Composition API
+- [X] Convert TodoListComposition to TodoList
+- [X] useAxios custom composable/re-usable logic
+  - [X] data, isLoading status, errorMessage
