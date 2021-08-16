@@ -1,5 +1,5 @@
 <template>
-  <h2>Composition Composition</h2>
+  <h2>Counter Composition</h2>
   <!-- :class="isNegative ? 'negative' : 'positive'" -->
   <!-- :class="calculateClass()" -->
   <p class="count" :class="isNegative ? 'negative' : 'positive'">
