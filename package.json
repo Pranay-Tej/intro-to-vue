@@ -10,7 +10,8 @@
     "build:samsung": "vite build --mode samsung",
     "build:amazon": "export VITE_TENANT=amazon && vite build",
     "serve": "vite preview",
-    "api": "json-server --watch db.json --port 3001"
+    "api": "json-server --watch db.json --port 3001",
+    "api:apple": "json-server --watch apple.json --port 3002"
   },
   "dependencies": {
     "axios": "^0.21.1",
