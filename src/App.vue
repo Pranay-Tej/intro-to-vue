@@ -11,6 +11,7 @@
   <router-link to="/todos">TodoList</router-link><br />
   <router-link to="/expenses">Expenses</router-link><br />
   <router-link to="/composition">Composition</router-link><br />
+  <router-link to="/vuex">Vuex</router-link><br />
 
   <hr />
   <!-- Replaced Dynamically -->

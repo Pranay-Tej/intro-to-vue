@@ -100,3 +100,12 @@ VS Code extensions
 - [X] Convert TodoListComposition to TodoList
 - [X] useAxios custom composable/re-usable logic
   - [X] data, isLoading status, errorMessage
+
+### 5. Vuex
+
+- [X] `npm i vuex@next`
+- [X] configure `store/index.js`
+- [X] Use store plugin
+- [X] state, mutations, actions, modules
+- [X] Component communication
+- [X] Store Devtools

@@ -8,6 +8,7 @@ const Expenses = () => import("../views/expenses/Expenses.vue");
 const ExpenseList = () => import("../views/expenses/ExpenseList.vue");
 const ExpenseDetail = () => import("../views/expenses/ExpenseDetail.vue");
 const Composition = () => import("../views/composition/Composition.vue");
+const Vuex = () => import("../views/vuex/Vuex.vue");
 
 const routes = [
   {
@@ -43,6 +44,10 @@ const routes = [
   {
     path: "/composition",
     component: Composition,
+  },
+  {
+    path: "/vuex",
+    component: Vuex,
   },
   { path: "/:pathMatch(.*)*", component: NotFound },
 ];
