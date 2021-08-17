@@ -118,3 +118,10 @@ VS Code extensions
 - [X] npm scripts
   - [X] multiple dev setups
   - [X] multiple prod builds
+
+### 7. Cypress (Automated Testing)
+
+- [ ] Automate TodoList functionality testing
+  - [ ] Add
+  - [ ] Edit
+  - [ ] Delete
