@@ -114,7 +114,7 @@ VS Code extensions
 
 ### 6. Multiple Configurations
 
-- [ ] env variables configuration
-- [ ] npm scripts
-  - [ ] multiple dev setups
-  - [ ] multiple prod builds
+- [X] env variables configuration
+- [X] npm scripts
+  - [X] multiple dev setups
+  - [X] multiple prod builds
