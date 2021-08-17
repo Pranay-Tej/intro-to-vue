@@ -8,7 +8,7 @@
   <router-link to="/">Home</router-link><br />
   <router-link to="/counter">Counter</router-link><br />
   <router-link to="/forms">Forms</router-link><br />
-  <router-link to="/todos">TodoList</router-link><br />
+  <router-link to="/todos" cy-data="todo-list-link">TodoList</router-link><br />
   <router-link to="/expenses">Expenses</router-link><br />
   <router-link to="/composition">Composition</router-link><br />
   <router-link to="/vuex">Vuex</router-link><br />

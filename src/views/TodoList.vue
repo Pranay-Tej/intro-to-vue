@@ -7,15 +7,31 @@
     >
       {{ todoItem.title }}
       <!-- TODO: edit/delete todo -->
-      <button @click="fetchById(todoItem.id)">✒️</button>
-      <button @click="deleteById(todoItem.id)">❌</button>
+      <button
+        @click="fetchById(todoItem.id)"
+        :cy-data="`edit-${todoItem.title}`"
+      >
+        ✒️
+      </button>
+      <button
+        @click="deleteById(todoItem.id)"
+        :cy-data="`delete-${todoItem.title}`"
+      >
+        ❌
+      </button>
     </li>
   </ul>
 
   <!-- TODO: Form to create/edit todo -->
-  <form @submit.prevent="saveTodo">
+  <form @submit.prevent="saveTodo" cy-data="todo-form">
     <label for="title">Todo</label>
-    <input type="text" name="title" id="title" v-model="todo.title" />
+    <input
+      type="text"
+      name="title"
+      id="title"
+      v-model="todo.title"
+      cy-data="todo-input"
+    />
     <button type="submit">{{ todo?.id ? "Update" : "Create" }}</button>
     <button type="button" @click="resetTodoForm" v-if="todo?.id">Cancel</button>
   </form>
