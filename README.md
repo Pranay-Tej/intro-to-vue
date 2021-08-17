@@ -111,3 +111,10 @@ VS Code extensions
 - [X] Store Devtools
 - [X] Vuex TodoList
 - [X] Event Chaining
+
+### 6. Multiple Configurations
+
+- [ ] env variables configuration
+- [ ] npm scripts
+  - [ ] multiple dev setups
+  - [ ] multiple prod builds
