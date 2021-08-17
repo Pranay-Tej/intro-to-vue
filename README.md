@@ -109,3 +109,5 @@ VS Code extensions
 - [X] state, mutations, actions, modules
 - [X] Component communication
 - [X] Store Devtools
+- [X] Vuex TodoList
+- [X] Event Chaining
