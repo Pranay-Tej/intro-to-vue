@@ -4,7 +4,7 @@
 
 Links
 - [Slides](https://slides.com/pranay_teja/intro-to-vue)
-- [Vue Docs](https://v3.vuejs.org/guide/introduction.html)
+- [Vue 3 Docs](https://v3.vuejs.org/guide/introduction.html)
 - [dev-handbook notes](https://dev-handbook.vercel.app/frontend/vue/vue)
 - [Replacing jQuery with Vue Article](https://www.smashingmagazine.com/2018/02/jquery-vue-javascript)
 
@@ -27,13 +27,25 @@ VS Code extensions
   - Tabnine
 - npm packages
   - vite
+  - json-server
   - axios
   - vue-router
   - vuex
+  - cypress
+  - chance
+  - @capacitor/cli@2.4.7
+  - @capacitor/core@2.4.7
 
 ---
 
 ## Tasks
+
+### Instructions
+
+- Clone the repo `git clone https://github.com/Pranay-Tej/intro-to-vue.git`
+- `npm run dev` for local development server
+- All tasks have corresponding git branches. `git branch -a` to view all branches
+- Solution for current task will be available in next task's branch
 
 ### 1. Counter
 
@@ -125,3 +137,14 @@ VS Code extensions
   - [X] Add
   - [X] Edit
   - [X] Delete
+
+### 8. Capacitor Hybrid app
+
+- [ ] `npm i @capacitor/core@2.4.7`
+- [ ] `npm i -D @capacitor/cli@2.4.7`
+- [ ] `npx cap init`
+- [ ] `npx cap add android`
+- [ ] Configure capacitor
+  - [ ] Add android studio path
+  - [ ] Add webDir path
+- [ ] `npx cap open android`
