@@ -1,13 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <!-- <Counter :step="1" @emitCurrentValue="printCounterValue(1, $event)" />
+  <Counter :step="10" @emitCurrentValue="printCounterValue(2, $event)" /> -->
+  <!-- <hr /> -->
+  <!-- <Forms /> -->
+
+  <!-- <TodoList /> -->
+  <router-link to="/">Home</router-link><br />
+  <router-link to="/counter">Counter</router-link><br />
+  <router-link to="/forms">Forms</router-link><br />
+  <router-link to="/todos" cy-data="todo-list-link">TodoList</router-link><br />
+  <router-link to="/expenses">Expenses</router-link><br />
+  <router-link to="/composition">Composition</router-link><br />
+  <router-link to="/vuex">Vuex</router-link><br />
+
+  <hr />
+  <!-- Replaced Dynamically -->
+  <router-view></router-view>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+// import Forms from "./views/Forms.vue";
+// import Counter from "./views/Counter.vue";
+// import TodoList from "./views/TodoList.vue";
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+export default {
+  name: "App",
+  components: {
+    // Forms,
+    // Counter,
+    // TodoList,
+  },
+  methods: {
+    printCounterValue(counterId, data) {
+      console.log({ counterId, ...data });
+    },
+  },
+};
 </script>
 
 <style>
