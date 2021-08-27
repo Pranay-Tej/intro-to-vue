@@ -108,6 +108,7 @@
   <br />
 
   <!-- Dynamic form array -->
+</template>
 
 <script>
 export default {
