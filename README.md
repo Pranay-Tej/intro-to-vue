@@ -43,9 +43,11 @@ VS Code extensions
 ### Instructions
 
 - Clone the repo `git clone https://github.com/Pranay-Tej/intro-to-vue.git`
+- `cd intro-to-vue` and `npm i` to install dependencies
 - `npm run dev` for local development server
 - All tasks have corresponding git branches. `git branch -a` to view all branches
 - Solution for current task will be available in next task's branch
+- Checkout to `1.1` branch to get started with the first assignment
 
 ### 1. Counter
 
@@ -147,4 +149,6 @@ VS Code extensions
 - [ ] Configure capacitor
   - [ ] Add android studio path
   - [ ] Add webDir path
+- [ ] `npx cap copy`
 - [ ] `npx cap open android`
+- [ ] Check capacitor v3 documentation
